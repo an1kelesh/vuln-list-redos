@@ -11214,7 +11214,7 @@
 					},
 					"criteria": {
 						"criterion": {
-							"_comment": "gzip version is less than 0:1.9-10",
+							"_comment": "gzip version is less than 0:1.9-9",
 							"_test_ref": "oval:redos:tst:82"
 						},
 						"_operator": "AND"
@@ -68027,7 +68027,7 @@
 					"_version": "1",
 					"_check": "all",
 					"_check_existence": "at_least_one_exists",
-					"_comment": "gzip version is less than 0:1.9-10"
+					"_comment": "gzip version is less than 0:1.9-9"
 				},
 				{
 					"object": {
