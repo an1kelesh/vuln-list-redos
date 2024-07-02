@@ -3663,6 +3663,50 @@
 				},
 				{
 					"metadata": {
+						"title": "Уязвимость библиотеки nghttp2",
+						"affected": {
+							"platform": "RED OS 7.3",
+							"product": "nghttp2",
+							"_family": "unix"
+						},
+						"reference": [
+                        {
+							"_source": "ROS",
+							"_ref_id": "ROS-20220125-09",
+							"_ref_url": "https://redos.red-soft.ru/support/secure/uyazvimosti/uyazvimost-biblioteki-nghttp2-cve-ne-prisvoeno/"
+						}
+                        ],
+						"description": "Уязвимость библиотеки nghttp2 связана с ошибкой при освобождении памяти. Эксплуатация уязвимости может\n                позволить нарушителю, действующему удаленно, вызвать отказ в обслуживании целевой системы",
+						"advisory": {
+							"severity": "Medium",
+							"issued": {
+								"_date": "2022-02-01"
+							},
+							"updated": {
+								"_date": "2022-03-24"
+							},
+							"cve": {
+								"_cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+							},
+							"affected_cpe_list": {
+								"cpe": "cpe:/o:redos:redos:7"
+							},
+							"_from": "redos@red-soft.ru"
+						}
+					},
+					"criteria": {
+						"criterion": {
+							"_comment": "nghttp2 version is less than 0:1.46.0-1",
+							"_test_ref": "oval:redos:tst:26"
+						},
+						"_operator": "AND"
+					},
+					"_id": "oval:redos:def:72",
+					"_version": "1",
+					"_class": "vulnerability"
+				},
+				{
+					"metadata": {
 						"title": "Уязвимость агента передачи почты Sendmail",
 						"affected": {
 							"platform": "RED OS 7.3",
@@ -17818,6 +17862,50 @@
 						"_operator": "AND"
 					},
 					"_id": "oval:redos:def:338",
+					"_version": "1",
+					"_class": "vulnerability"
+				},
+				{
+					"metadata": {
+						"title": "Уязвимость OpenSSH",
+						"affected": {
+							"platform": "RED OS 7.3",
+							"product": "openssh",
+							"_family": "unix"
+						},
+						"reference": [
+                        {
+							"_source": "ROS",
+							"_ref_id": "ROS-20220706-01",
+							"_ref_url": "https://redos.red-soft.ru/support/secure/uyazvimosti/uyazvimost-openssh-/"
+						}
+                        ],
+						"description": "Уязвимость набора программ предоставляющих шифрование сеансов связи OpenSSH связана с тем, что\n                приложение не накладывает должным образом ограничения безопасности, когда параметр ключевого слова\n                LogVerbose включен с набором параметров, которые активируют ведение журнала для изолированного процесса\n                sshd с низким уровнем привилегий. Эксплуатация уязвимости может позволить нарушителю, действующему\n                удаленно, и который может использовать процесс с низким уровнем привилегий, может обойти отправку\n                OpenSSH и атаковать процессы высокого уровня",
+						"advisory": {
+							"severity": "Medium",
+							"issued": {
+								"_date": "2022-07-06"
+							},
+							"updated": {
+								"_date": "2022-07-06"
+							},
+							"cve": {
+								"_cvss3": "AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+							},
+							"affected_cpe_list": {
+								"cpe": "cpe:/o:redos:redos:7"
+							},
+							"_from": "redos@red-soft.ru"
+						}
+					},
+					"criteria": {
+						"criterion": {
+							"_comment": "openssh version is less than 0:8.9p1-5",
+							"_test_ref": "oval:redos:tst:116"
+						},
+						"_operator": "AND"
+					},
+					"_id": "oval:redos:def:339",
 					"_version": "1",
 					"_class": "vulnerability"
 				},
@@ -34268,6 +34356,50 @@
 						"_operator": "AND"
 					},
 					"_id": "oval:redos:def:652",
+					"_version": "1",
+					"_class": "vulnerability"
+				},
+				{
+					"metadata": {
+						"title": "Уязвимость Node.js",
+						"affected": {
+							"platform": "RED OS 7.3",
+							"product": "nodejs",
+							"_family": "unix"
+						},
+						"reference": [
+                        {
+							"_source": "ROS",
+							"_ref_id": "ROS-20230130-01",
+							"_ref_url": "https://redos.red-soft.ru/support/secure/uyazvimosti/uyazvimost-node-js-/"
+						}
+                        ],
+						"description": "Уязвимость кроссплатформенной среды выполнения JavaScript Node.js связана с некорректной обработкой\n                исключения в файле src/node_options-inl.h при подаче на вход неверного аргумента командной строки.\n                Эксплуатация уязвимости может позволить нарушителю, действующему удаленно, создать аварийное завершение\n                приложение и вызвать отказ в обслуживнаии",
+						"advisory": {
+							"severity": "Medium",
+							"issued": {
+								"_date": "2023-01-30"
+							},
+							"updated": {
+								"_date": "2023-01-30"
+							},
+							"cve": {
+								"_cvss3": "AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H"
+							},
+							"affected_cpe_list": {
+								"cpe": "cpe:/o:redos:redos:7"
+							},
+							"_from": "redos@red-soft.ru"
+						}
+					},
+					"criteria": {
+						"criterion": {
+							"_comment": "nodejs version is less than 1:16.13.2-2",
+							"_test_ref": "oval:redos:tst:205"
+						},
+						"_operator": "AND"
+					},
+					"_id": "oval:redos:def:653",
 					"_version": "1",
 					"_class": "vulnerability"
 				},
